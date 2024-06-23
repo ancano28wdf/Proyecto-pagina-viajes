@@ -99,53 +99,56 @@
     <div class="ofertas">
         <div class="oferta">
             <img src="" class="promocion">
-            <p class="titulo">Oferta de verano</p><p clas="subtitulo">viaje combinado, incluye vuelos y Hoteles</p><p>Viaje combinado:3 destinos, 9 noches, 4 transportes/vuelos</p><p>Intinerario: Praga, Viena, Budapes</p>
-            
+            <p class="titulo">Oferta de verano</p><p class="subtitulo">Viaje combinado, incluye vuelos y Hoteles</p> <p class="mensaje">Viaje combinado:3 destinos, 9 noches, 4 transportes/vuelos</p><p class="mensaje">Intinerario: Praga, Viena, Budapes</p>
+        </div>
+        <div class="oferta">    
             <img src="" class="promocion">
-            <p class="titulo">Oferta de otoño</p><p class="subtitulo">viaje combinado, incluye vuelos y Hoteles</p><p>Viaje combinado:3 destinos, 9 noches, 4 transportes/vuelos</p><p>Intinerario: Francia, Mnasallar, Barcelona</p>
-            
+            <p class="titulo">Oferta de otoño</p><p class="subtitulo">Viaje combinado, incluye vuelos y Hoteles</p><p class="mensaje">Viaje combinado:3 destinos, 9 noches, 4 transportes/vuelos</p><p class="mensaje">Intinerario: Francia, Mnasallar, Barcelona</p>
+        </div>
+        <div class="oferta">
             <img src="" class="promocion">
-            <p class="titulo">Oferta de verano</p><p class="subtitulo">viaje combinado, incluye vuelos y Hoteles</p><p>Viaje combinado:3 destinos, 9 noches, 4 transportes/vuelos</p><p>Intinerario: Tailandia, Vietnam, Camboya</p>    
+            <p class="titulo">Oferta de verano</p><p class="subtitulo">Viaje combinado, incluye vuelos y Hoteles</p><p class="mensaje">Viaje combinado:3 destinos, 9 noches, 4 transportes/vuelos</p><p class="mensaje">Intinerario: Tailandia, Vietnam, Camboya</p>    
         </div>
     </div>
   
-    <h1>Reserva tu viaje con nosotros</h1><h2>Elije tu paquete o aparta tu vuelo</h2>
+    <h1>Reserva tu viaje con nosotros</h1> <h2>Elije tu paquete y aparta tu vuelo</h2>
+    
     <div class=”card-body”>
     <form id=“formulario”>
     <section class="form_container"> 
      <form class="form">
          <input  type="text"  class="form_imput" name=”Aeropueto”  id="aeropueto" required autocomplete="off" placeholder="Aeropuerto">
-         <label for="start"></label>
-         <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
- 
-     <label for="tipo deviaje">
-       <span>Tipo de viaje:</span>
-     </label>
-     <select id="tipo de viaje" name="tipo de viaje">
-       <option value="paquete">Combinado</option>
-       <option value="vi">Individual</option>
-     </select>
-
-     <label for="pago">
-        <span>Pago:</span>
-      </label>
-      <select id="pago" name="pago">
-        <option value="visa">VISA</option>
-        <option value="mc">Master Card</option>
-        <option value="amex">American Express</option>
-      </select>
-   
         
-         <p>
-             <input type="submit" class="botton" value="Comprar">
-         </p>
-     </form> 
+         <label for="start"></label>
+         <input type="date" id="start" name="trip-start" value="2024-06-29" min="2024-01-01" max="2025-12-31" />
+ 
+         <label for="tipo deviaje">
+           <span>Tipo de viaje:</span>
+         </label>
+         <select id="tipo de viaje" name="tipo de viaje">
+          <option value="paquete">Combinado</option>
+          <option value="vi">Individual</option>
+         </select>
+
+         <label for="pago">
+           <span>Pago:</span>
+         </label>
+         <select id="pago" name="pago">
+           <option value="visa">VISA</option>
+           <option value="mc">Master Card</option>
+           <option value="amex">American Express</option>
+         </select>
+   
+         <input type="submit" class="botton" value="Reservar">
+      </form>
+    </section>         
+    </form> 
     </div>
  
  <div class=”col-md-6”>
-     <table class=”table caption-top bg-light”>
+     <table class=”table”>
         <thread>
-          <tr>
+          <tr class="col">
             <th scope=”col”>Aeropuerto</th>
             <th scope=”col”>Fecha de viaje</th>
             <th scope=”col”>Viaje</th>
@@ -159,16 +162,16 @@
              <td>-</td>
              <td>-</td>
          </tr>
-     </tbody>
- </table>
+      </tbody>
+     </table>
  </div>
 
     <div class="clearfix"></div>
     <footer>
     <img src="" class="logo">
 
-    <nav>
-        <ul>
+    <nav class="final">
+        <ol>
             <li> 
                 <a href="index.HTML">
                     Quienes somos
@@ -199,13 +202,12 @@
                     Condiciones generales
                 </a> 
             </li>  
-        </ul>
+        </ol>
     </nav>
 
-    <h3>Viajaconnosotros.com</h3>
-    <h4>Direccion: Calle, No. Colonial, Estado, País</h4><h5>Telelfono-xxxxxxxxxx</h5>
-
-    <img src="redes">
+    <h3>Viajaconnosotros.com Direccion: Calle, No. Colonial, Estado, País Telelfono-xxxxxxxxxx</h3>
+    
+    <img  class="redes" src="" >
     </footer>
  
  

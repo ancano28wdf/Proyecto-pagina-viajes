@@ -13,36 +13,76 @@ header {
     grid-template-columns: repeat(2, 1fr); 
     box-sizing: content-box;
     background-color: rgb(116, 231, 202);
-    align-items: end;
+    align-content: end;
+    padding: 30px;
 }
 
-.menu {
+nav ul li {
+    list-style: none;
+    float: inline-start;
+    margin: auto;
+    padding-inline: 10px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+}
 
+p {
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.titulo {
+    font-size: 20px;
+    font-family: helvetica;
+}
+
+.subtitulo {
+    font-size: 15px;
+    font-family: arial;
+}
+
+.mensaje {
+    font-size: 15px;
+    font-family: calibri;
+}
+
+.ofertas {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+h1 {
+    background: rgb(235, 149, 38);
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+}
+
+h2 {
+    color: rgb(32, 32, 32);
+    background: rgb(235, 149, 38);
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center; 
+    margin:auto;
+    padding-top: 0;
 }
 
 .form_container {
     display: flex;
-    justify-content: left;
+    align-content: center;
     align-items: center;
-    height: 100vh;
-
+    padding: 20px;
+    padding-left: 280px;
 }
 
 .form {
-    width: 450px;
-    height: 450px;
-    background-color: whitesmoke;
-    border-radius: 8px;
-    
-
+    background-color: whitesmoke;  
 }
 
-.form_imput {
-    margin-bottom: 30px;
-    padding-right: 40px;
-    padding-left: 40px;
-
-}
 
 .titulo {
     display: flex;
@@ -51,14 +91,12 @@ header {
     padding-top: 60px;
 }
 
-
-h2 {
-    color: rgb(224, 224, 226);
-    font-size: small;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+h3 {
+    font-size: 15px;
+    color: #828282;
 }
 
-//calendario
+/*calendario*/
 label {
     display: block;
     font:
@@ -71,7 +109,31 @@ label {
     margin: 0.4rem 0;
   }
 
-//carrucel
+/*tabla*/
+.table {
+    padding-left: 30px;
+    
+}
+  
+.col {
+     font-family: Arial;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #e9e7e7;
+}
+
+nav ol li {
+    list-style: none;
+}
+
+a {
+    color: #828282;
+}
+
+/* carrucel */
 .slide {
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
