@@ -34,26 +34,102 @@ p {
     font-family: fantasy;
 }
 
-.titulo {
-    font-size: 20px;
-    font-family: helvetica;
-}
 
 .subtitulo {
     font-size: 15px;
     font-family: arial;
 }
 
-.mensaje {
+.mensaje1 {
     font-size: 15px;
-    font-family: calibri;
+    position: absolute;
+    top:380px;
+    left: 5%
 }
-
+.mensaje2 {
+    font-size: 15px;
+    position: absolute;
+    top:380px;
+    left: 35%
+}
+.mensaje3 {
+    font-size: 15px;
+    position: absolute;
+    top:380px;
+    left: 70%
+}
+.mensaje4 {
+    font-size: 15px;
+    position: absolute;
+    top:400px;
+    left: 5%
+}
+.mensaje5 {
+    font-size: 15px;
+    position: absolute;
+    top:400px;
+    left: 35%
+}
+.mensaje6 {
+    font-size: 15px;
+    position: absolute;
+    top:400px;
+    left: 70%
+}
+}
 .ofertas {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    padding-top: 40px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    position: relative;
     
 }
+.titulo1 {
+    font-size: 20px;
+    font-family: helvetica;
+    position: absolute;
+    top:300px;
+    left: 5%;
+}
+.titulo2 {
+    font-size: 20px;
+    font-family: helvetica;
+    position: absolute;
+    top:300px;
+    left: 35%;
+}
+.titulo3 {
+    font-size: 20px;
+    font-family: helvetica;
+    position: absolute;
+    top:300px;
+    left: 70%;
+}
+
+.subtitulo1 {
+    font-size: 15px;
+    font-family: arial;
+    position: absolute;
+    top:350px;
+    left: 5%;   
+}
+.subtitulo2 {
+    font-size: 15px;
+    font-family: arial;
+    position: absolute;
+    top:350px;
+    left: 35%;   
+}
+.subtitulo3 {
+    font-size: 15px;
+    font-family: arial;
+    position: absolute;
+    top:350px;
+    left: 70%;   
+}
+
 
 h1 {
     background: rgb(235, 149, 38);
@@ -161,7 +237,7 @@ a {
 .slide-item img {
     display: block;
     height: auto;
-    max-width: 100%;
+    max-width: 2500px;
 }
 .slide-control {
     background: rgba(0, 0, 0, 0.28);
