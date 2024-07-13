@@ -191,12 +191,13 @@ label {
 /*tabla*/
 .table {
     padding-left: 30px;
-    
+        
 }
   
 .col {
      font-family: Arial;
 }
+
 
 footer {
     display: grid;

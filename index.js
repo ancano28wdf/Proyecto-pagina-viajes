@@ -1,34 +1,34 @@
 //Evento para crear un nuevo viaje
-document.getElementById("formulario").addEventListener("submit", crear)
+document.getElementById("formulario").addEventListener("submit", crear);
 
 //Función crear
-function crear(){
-     Aeropuerto=document.getElementById("aeropuerto").value
-     strip-start=document.getElementById("start").value
-     tipodeviaje=document.getElementById("tipo de viaje").value
+function crear(e){
+     aeropuerto=document.getElementById("aeropuerto").value
+     start=document.getElementById("start").value
+     tipo de viaje=document.getElementById("tipo de viaje").value
      pago=document.getElementById("pago").value
-}
+
 let viaje = {
      aeropuerto,
-     fecha,
+     start,
      tipo de viaje,
-     pago,
+     pago
 }
 if(localStorage.getItem("viajes") === null) {
      let viajes = []
       viajes.push(viaje)
       localStorage.sertItem("viajes", JSON.stringify(viajes))
-}
-else{
+}else{
      let viajes = JSON.parse(localStorage.getItem("viajes"))
-      viajes.push(viajes)
+      viajes.push(viaje)
       localStorage.setItem("viajes", JSON.stringify(viajes))
 }
-leer ();{
-document.getElementById("formulario").reset();
-console.log("Viaje guardado correctamente")
-e.preventDefault()
+leer ();
+  document.getElementById("formulario").reset();
+  console.log("Viaje guardado correctamente")
+  e.preventDefault()
 }
+
 
 //Función “leer”
 
@@ -38,20 +38,18 @@ function leer(){
          for(let i=0; i < viajes.length; i++) {
                       let aeropuerto = viajes[i].aeropuerto
                       let start = viajes[i].start
-                      let tipodeviaje = viajes[i].tipodeviaje
+                      let tipo de viaje = viajes[i].tipo de viaje
                       let pago = viajes[i].pago
 
                       document.getElementById("tbody").innerHTML +=
-                      ´<tr>
+                      `<tr>
                              <td>${aeropuerto}</td>
                              <td>${start}</td>
-                             <td>${tipodeviaje}</td>
+                             <td>${tipo de viaje}</td>
                              <td>${pago}</td>
-                             <td><buttom onclick="editar(´${titulo}')" class="btn btn-sucess">Editar</buttom></td>
+                             <td><buttom onclick="editar(`$(titulo)`)" class="btn btn-sucess">Editar</buttom></td>
                        </tr>
-                      ´
-                        
-
+                     `
           }
 }
 
@@ -60,9 +58,8 @@ function editar(titulo){
      let viajes = JSON.parse(localStorage.getItem("viajes"));
      for (let i=0; i <viajes.length; i++){
          if(viajes[i].titulo === titulo){
-          document.getElementById("body").innerHTML = ´               
-                            <form  class="body">
-                            <section class="form_container"> 
+           document.getElementById("body").innerHTML = `               
+                         <section class="form_container"> 
                             <form class="form">
                             <input  type="text"  class="form_imput" name="Aeropueto"  id="newaeropueto" required autocomplete="off" placeholder="${viajes[i].aeropuerto}">
 
@@ -85,13 +82,14 @@ function editar(titulo){
                                  <option value="mc">Master Card</option>
                                  <option value="amex">American Express</option>
                             </select>
-                            <buttom class="btn btn-success" onclick="Actualizar(´${i}´)">Actualizar</buttom>
+                            <buttom class="btn btn-success" onclick="Actualizar(`$(i)`">Actualizar</buttom>
                             <buttom class="btn btn-primary" onclick="VistaPrincipal()">Cancelar</buttom>
-   
-         
-                  ´
-          }
+                            </form>
+                         </section>
+                         
+                          `
      }
+          }
 }
 
 //Funcion Actualizar
@@ -99,7 +97,7 @@ function actualizar(i) {
      let viajes = JSON.parse(localStorage.getItem("viajes"));
      viajes[i].aeropuerto = document.getElementById("newaeropuerto").value;
      viajes[i].start = document.getElementById("newstart").value;
-     viajes[i].ipo de viaje = document.getElementById("newtipo de viaje").value;
+     viajes[i].tipo de viaje = document.getElementById("newtipo de viaje").value;
      viajes[i].pago = document.getElementById("newpago").value;
 
           localStorage.setItem("viajes", JSON.stringify(viajes));
@@ -109,18 +107,19 @@ function actualizar(i) {
 //Funcion eliminar
 function eliminar(titulo) {
      let viajes = JSON.parse(localStorage.getItem("viajes"));
-     for(let i=0; i<viajes.length; i){
-          if(viajes[i].titulo === titulo)
+     for(let i=0; i<viajes.length; i++){
+          if(viajes[i].titulo === titulo){
                viajes.splice(i,1);
      }
 }
-
 localStorage.setItem("viajes", JSON.stringify(viajes));
 leer();
+         }
 
 //Funcion para mostrar la interfaz principal 
 function vistaPrincipal() {
-     document.getElementById("body").innerHTML = ´      <form id="formulario" class="body">
+     document.getElementById("body").innerHTML = `      
+     <form id="formulario" class="body">
      <section class="form_container"> 
       <form class="form">
         <input  type="text"  class="form_imput" name="Aeropueto"  id="aeropueto" required autocomplete="off" placeholder="Aeropuerto">
@@ -168,8 +167,9 @@ function vistaPrincipal() {
              <td>-</td>
          </tr>
       </tbody>
-     </table>
-     ´
+     </table>  
+ </div> `
+leer ()
 }
 
-leer()
+leer();
